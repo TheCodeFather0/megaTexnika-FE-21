@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mega Texnika FE-21</title>
+
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!--poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--my css-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="contactInfo">
+        <div class="locationAndPhoneNumber">
+          <a href="tel:+994(12) 123 45 67">+994(12) 123 45 67</a> | Fətəli Xan
+          Xoyski 111A, Bakı Azərbaycan
+        </div>
+        <div class="socialMediaIcons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="./index.html" class="logoContainer">
+            <img src="./assets/images/logo.png" alt="logo" />
+            megaTexnika
+          </a>
+        </div>
+        <div class="navigation">
+          <a href="./index.html">Əsas səhifə</a>
+          <a href="#">Haqqımızda</a>
+          <a href="#">Texnikalar</a>
+          <a href="#">İcarə şərtləri</a>
+          <a href="#">Bloq</a>
+          <a href="#">Əlaqə</a>
+        </div>
+
+        <div class="langs">
+          <a href="#">Az</a>
+          <a href="#">En</a>
+          <a href="#">Ru</a>
+        </div>
+
+        <div class="bars">
+          <img src="./assets/images/bars.png" alt="" />
+        </div>
+      </nav>
+
+      <div class="mobileMenu">
+        <div class="navigation">
+          <a href="./index.html">Əsas səhifə</a>
+          <a href="#">Haqqımızda</a>
+          <a href="#">Texnikalar</a>
+          <a href="#">İcarə şərtləri</a>
+          <a href="#">Bloq</a>
+          <a href="#">Əlaqə</a>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const bars = document.querySelector(".bars");
+      const mobileMenu = document.querySelector(".mobileMenu");
+      bars.onclick = function () {
+        mobileMenu.classList.toggle("showMobileMenu");
+        if ([...mobileMenu.classList].includes("showMobileMenu")) {
+          bars.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        } else {
+          bars.innerHTML = '<img src="./assets/images/bars.png" alt="" />';
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+:root {
+  --saytinEsasRengi: #ffc01f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.contactInfo {
+  background-color: var(--saytinEsasRengi);
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  padding-inline: 20px;
+}
+
+.socialMediaIcons a {
+  margin-left: 10px;
+}
+
+.contactInfo a {
+  color: black;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 2px solid #ddd;
+}
+
+.navbar a {
+  color: #353535;
+}
+
+.navigation a {
+  margin-inline: 10px;
+}
+
+.langs a:not(:last-child) {
+  border-right: 1px solid;
+  padding-right: 5px;
+}
+
+.langs a:first-child {
+  font-weight: bold;
+}
+
+.bars {
+  display: none;
+}
+
+.mobileMenu .navigation {
+  padding: 10px;
+}
+.mobileMenu .navigation a {
+  display: block;
+  margin-bottom: 10px;
+  color: #353535;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.showMobileMenu {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .contactInfo a,
+  .navbar a {
+    font-size: 15px;
+  }
+
+  .navigation a {
+    margin-inline: 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar .navigation,
+  .langs {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+    cursor: pointer;
+    color: var(--saytinEsasRengi);
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contactInfo {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .locationAndPhoneNumber {
+    font-size: 13px;
+  }
+}
